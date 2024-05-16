@@ -37,7 +37,8 @@ public class AbrigoService {
             throw new ValidacaoException("Dados já cadastrados para outro abrigo!");
         }
 
-        abrigoRepository.save(new Abrigo(dto));
+        Abrigo abrigo = new Abrigo(dto);
+        abrigoRepository.save(abrigo);
     }
 
     public List<PetDto> listarPetsDoAbrigo(String idOuNome) {

@@ -14,10 +14,10 @@ import java.util.List;
 public class PetService {
 
     @Autowired
-    private PetRepository repository;
+    private PetRepository petRepository;
 
     public List<PetDto> buscarPetsDisponiveis() {
-        return repository
+        return petRepository
                 .findAllByAdotadoFalse()
                 .stream()
                 .map(PetDto::new)
@@ -25,7 +25,7 @@ public class PetService {
     }
 
     public void cadastrarPet(Abrigo abrigo, CadastroPetDto dto) {
-        repository.save(new Pet(dto, abrigo));
+        petRepository.save(new Pet(dto, abrigo));
     }
 
 }

@@ -2,7 +2,12 @@ package br.com.naponline.adopet.api.model;
 
 import br.com.naponline.adopet.api.dto.AtualizacaoTutorDto;
 import br.com.naponline.adopet.api.dto.CadastroTutorDto;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,16 @@
 package br.com.naponline.adopet.api.model;
 
 import br.com.naponline.adopet.api.dto.CadastroPetDto;
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 
 import java.util.Objects;
 
@@ -34,7 +43,7 @@ public class Pet {
     @OneToOne(mappedBy = "pet", fetch = FetchType.LAZY)
     private Adocao adocao;
 
-    public Pet(){
+    public Pet() {
 
     }
 
